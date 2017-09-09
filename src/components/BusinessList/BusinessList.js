@@ -7,8 +7,9 @@ class BusinessList extends React.Component {
         return (
             <div className="BusinessList">
                 {
-                    this.props.businesses.map(function(business) {
-                        return <Business business={business} />;
+                    this.props.businesses.map(function(business, i) {
+                        {/* Not the best to use an index as a key... but no reason to give a real uID for this project. */}
+                        return <Business key={i} business={business} />;
                     })
                 }
             </div>
